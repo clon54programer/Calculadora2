@@ -141,5 +141,65 @@ namespace Calculadora2
                 textBox1.Text = textBox1.Text + "0";
             }
         }
+
+        private void btnDivison_Click(object sender, EventArgs e)
+        {
+            a = Convert.ToDouble(this.textBox1.Text);
+            c = "/";
+            this.textBox1.Clear();
+            this.textBox1.Focus();
+          
+        }
+
+        private void btnSuma_Click(object sender, EventArgs e)
+        {
+            a = Convert.ToDouble(this.textBox1.Text);
+            c = "+";
+            this.textBox1.Clear();
+            this.textBox1.Focus();
+        }
+
+        private void btnMulti_Click(object sender, EventArgs e)
+        {
+            a = Convert.ToDouble(this.textBox1.Text);
+            c = "*";
+            this.textBox1.Clear();
+            this.textBox1.Focus();
+        }
+
+        private void btnResta_Click(object sender, EventArgs e)
+        {
+            a = Convert.ToDouble(this.textBox1.Text);
+            c = "-";
+            this.textBox1.Clear();
+            this.textBox1.Focus();
+        }
+
+        private void btnigual_Click(object sender, EventArgs e)
+        {
+            b = Convert.ToDouble(this.textBox1.Text);
+            switch (c)
+            {
+                case "+":
+                    this.textBox1.Text = Convert.ToString(b + a);
+                    break;
+                case "-":
+                    this.textBox1.Text = Convert.ToString(b - a);
+                    break;
+                case "*":
+                    this.textBox1.Text = Convert.ToString(b * a);
+                    break;
+                case "/":
+                    this.textBox1.Text = Convert.ToString(b / a);
+                    break;
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            a = Convert.ToDouble("");
+            b = Convert.ToDouble("");
+            this.textBox1.Text = "";
+        }
     }
 }
