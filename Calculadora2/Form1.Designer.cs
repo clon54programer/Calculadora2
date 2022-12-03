@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,15 +46,18 @@
             this.btnMulti = new System.Windows.Forms.Button();
             this.btnDivison = new System.Windows.Forms.Button();
             this.btnigual = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(23, 29);
+            this.textBox1.Location = new System.Drawing.Point(23, 33);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(395, 85);
+            this.textBox1.Size = new System.Drawing.Size(395, 81);
             this.textBox1.TabIndex = 0;
             // 
             // button1
@@ -232,6 +236,20 @@
             this.btnigual.UseVisualStyleBackColor = true;
             this.btnigual.Click += new System.EventHandler(this.btnigual_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.ShowItemToolTips = false;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(307, 26);
+            // 
+            // señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem
+            // 
+            this.señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem.Name = "señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem";
+            this.señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
+            this.señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem.Text = "Señor no puede hacer mas de 2 operaciones";
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +279,8 @@
             this.Name = "Calculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Calculadora_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +305,8 @@
         private System.Windows.Forms.Button btnMulti;
         private System.Windows.Forms.Button btnDivison;
         private System.Windows.Forms.Button btnigual;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem señorNoPuedeHacerMasDe2OperacionesToolStripMenuItem;
     }
 }
 

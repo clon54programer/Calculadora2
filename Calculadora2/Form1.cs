@@ -177,22 +177,23 @@ namespace Calculadora2
 
         private void btnigual_Click(object sender, EventArgs e)
         {
-            b = Convert.ToDouble(this.textBox1.Text);
+            b = Convert.ToDouble(this.textBox1.Text);//problema encontrado caundo colaca mas de dos  un numero falla el programa
             switch (c)
             {
                 case "+":
                     this.textBox1.Text = Convert.ToString(b + a);
                     break;
                 case "-":
-                    this.textBox1.Text = Convert.ToString(b - a);
+                    this.textBox1.Text = Convert.ToString(a - b);
                     break;
                 case "*":
                     this.textBox1.Text = Convert.ToString(b * a);
                     break;
                 case "/":
-                    this.textBox1.Text = Convert.ToString(b / a);
+                    this.textBox1.Text = Convert.ToString(a / b);
                     break;
             }
+        
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
@@ -200,6 +201,11 @@ namespace Calculadora2
             this.textBox1.Text = "";
             a = 0D; //resloscion del problema una no era Conver.ToDouble("") sino que habia que volverlo nulo
             b = 0D;
+        }
+
+        private void Calculadora_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
