@@ -196,10 +196,10 @@ namespace Calculadora2
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
-        {
-            a = Convert.ToDouble("");
-            b = Convert.ToDouble("");
+        {        
             this.textBox1.Text = "";
+            a = 0D; //resloscion del problema una no era Conver.ToDouble("") sino que habia que volverlo nulo
+            b = 0D;
         }
     }
 }
